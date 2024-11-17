@@ -1,0 +1,195 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: rgb(223, 213, 213);
+    overflow-x: hidden;
+  }
+.navbar {
+    display: flex;
+    justify-content: right;
+    padding: 10px 20px;
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+    z-index: 10;
+ }
+ 
+ .navbar a {
+     color: #e8dfdf; /* White text color */
+     text-decoration: none;
+     padding: 15px 20px;
+     margin: 0 10px;
+     font-size: 18px;
+     position: relative;
+     overflow: hidden;
+     transition: color 0.3s;
+ }
+ 
+ .navbar a::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     bottom: 0;
+     width: 100%;
+     height: 2px;
+     background: #ff8c00; /* Underline color */
+     transform: translateX(-50%) scaleX(0);
+     transition: transform 0.3s ease;
+ }
+ 
+ .navbar a:hover::after {
+     transform: translateX(-50%) scaleX(1);
+ }
+ .video-background {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover; /* Ensures the video covers the entire screen */
+     z-index: -1; /* Puts the video behind all other content */
+     opacity: 0.5; /* Optional: adjust transparency */
+ }
+ .service-section{
+    padding: 50px 0;
+    color: #ffffff;
+}
+.service-section .container{
+    max-width: 1240px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-section .title{
+    color: #fff;
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+.service-section .title span{
+    color: #05d1ff;
+}
+.service-section .title::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 140px;
+    height: 3px;
+    background-color: #04d1ff;
+    transform: translateX(-50%);
+}
+.service-section .title::after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 45px;
+    height: 6px;
+    background-color: #00d0ff;
+    transform: translateX(-50%);
+}
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    
+}
+h1 {
+    text-align: center;
+    color: #c6c5c5;
+}
+.service {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 30px ;
+    margin-left: 30px ;
+}
+
+.service h2 {
+    margin: 0;
+    color: #04d1ff;
+    letter-spacing: 2px;
+}
+.service p {
+    color: #d4d2d2;
+    line-height: 25px;
+    margin-top: 20px ;
+}
+.price {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px ;
+    font-size: 20px;
+}
+.contact-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #04d1ff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.contact-button:hover {
+    background-color: #04d1ff;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .navbar a {
+        padding: 15px 10px;
+        font-size: 15px; 
+    }
+    .service-section .title{
+        font-size: 29px;
+    }
+    .container2 {
+        max-width: 400px;
+    }
+    .service h2 {
+        font-size: larger;
+    }
+    .service p {
+        font-size: 17px;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar a {
+        padding: 15px 20px;
+        font-size: 18px; 
+    }
+    .service-section .title{
+        font-size: 32px;
+    }
+    .container2 {
+        max-width: 700px;
+    }
+    .service h2 {
+        font-size: x-large;
+    }
+    .service p {
+        font-size: larger;
+    }
+}
