@@ -162,7 +162,18 @@ footer, .footercontainer, .footerbottom{
             object-fit: cover; /* Ensures the video covers the entire screen */
             z-index: -1; /* Puts the video behind all other content */
             opacity: 0.5; /* Optional: adjust transparency */
-        }
+}
+    section{
+    position: relative;
+    top: auto;
+    padding: 15px;
+    border-top-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+    background-color: rgb(32, 67, 35);
+    margin: 20px 0; /* Add some margin for spacing */
+    text-align: center; /* Center-align for better visibility */
+    z-index: 2; /* Ensures it appears above the video */
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
